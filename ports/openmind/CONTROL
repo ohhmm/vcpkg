@@ -1,0 +1,4 @@
+Source: openmind
+Version: 1.0.0
+Description: OpenMind project
+Build-Depends: boost, tbb, leveldb, snappy, vulkan, lz4, fmt, rocksdb, python3
