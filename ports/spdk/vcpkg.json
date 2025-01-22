@@ -2,6 +2,7 @@
   "name": "spdk",
   "version": "24.9.0",
   "description": "Storage Performance Development Kit",
+  "license": "BSD-3-Clause",
   "supports": "linux",
   "dependencies": [
     "spdk-dpdk",
