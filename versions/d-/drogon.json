@@ -6,11 +6,6 @@
       "port-version": 0
     },
     {
-      "git-tree": "4c701ae2548b41370eeebae23e5e14a806268c06",
-      "version-semver": "1.9.8",
-      "port-version": 0
-    },
-    {
       "git-tree": "2e3d5294ff97e6915a9ac0ada868c260728fe781",
       "version-semver": "1.9.7",
       "port-version": 0
@@ -38,7 +33,7 @@
     {
       "git-tree": "881a2d3fe8ed95836190c20c36471e47168954c5",
       "version-semver": "1.9.2",
-      "port-version": 0 
+      "port-version": 0
     },
     {
       "git-tree": "2258c21d158a9c39a058f30d88d6a8a9e8172e5b",

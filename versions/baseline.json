@@ -668,6 +668,22 @@
       "baseline": "0.75",
       "port-version": 0
     },
+    "bitserializer-cpprestjson": {
+      "baseline": "alias",
+      "port-version": 1
+    },
+    "bitserializer-pugixml": {
+      "baseline": "alias",
+      "port-version": 1
+    },
+    "bitserializer-rapidjson": {
+      "baseline": "alias",
+      "port-version": 1
+    },
+    "bitserializer-rapidyaml": {
+      "baseline": "alias",
+      "port-version": 3
+    },
     "bitsery": {
       "baseline": "5.2.4",
       "port-version": 0
@@ -1408,6 +1424,10 @@
       "baseline": "1.10.2",
       "port-version": 0
     },
+    "buck-yeh-bux-mariadb-client": {
+      "baseline": "1.0.4",
+      "port-version": 0
+    },
     "buck-yeh-bux-sqlite": {
       "baseline": "1.0.5",
       "port-version": 0
@@ -1498,6 +1518,14 @@
     },
     "cargs": {
       "baseline": "1.2.0",
+      "port-version": 0
+    },
+    "cartographer": {
+      "baseline": "1.0.0",
+      "port-version": 6
+    },
+    "casadi": {
+      "baseline": "3.6.7",
       "port-version": 0
     },
     "casclib": {
@@ -4616,6 +4644,10 @@
       "baseline": "2.1.3",
       "port-version": 0
     },
+    "libgpod": {
+      "baseline": "2019-08-29",
+      "port-version": 4
+    },
     "libgta": {
       "baseline": "1.0.8",
       "port-version": 5
@@ -5951,6 +5983,10 @@
     "mikktspace": {
       "baseline": "2020-10-06",
       "port-version": 3
+    },
+    "milerius-sfml-imgui": {
+      "baseline": "1.1",
+      "port-version": 6
     },
     "mimalloc": {
       "baseline": "2.1.7",
@@ -8376,6 +8412,10 @@
       "baseline": "1.45",
       "port-version": 1
     },
+    "shiva": {
+      "baseline": "1.0",
+      "port-version": 7
+    },
     "shogun": {
       "baseline": "2023-12-19",
       "port-version": 1
@@ -8593,7 +8633,7 @@
       "port-version": 0
     },
     "spdk": {
-      "baseline": "24.01",
+      "baseline": "24.9.0",
       "port-version": 0
     },
     "spdk-dpdk": {
@@ -8824,6 +8864,10 @@
       "baseline": "2.3.3",
       "port-version": 8
     },
+    "szip": {
+      "baseline": "2.1.1",
+      "port-version": 12
+    },
     "tabulate": {
       "baseline": "1.5",
       "port-version": 0
@@ -8928,6 +8972,10 @@
       "baseline": "1.7.0",
       "port-version": 0
     },
+    "theia": {
+      "baseline": "0.8",
+      "port-version": 11
+    },
     "think-cell-range": {
       "baseline": "2023.1",
       "port-version": 1
@@ -8935,6 +8983,10 @@
     "thomasmonkman-filewatch": {
       "baseline": "2023-01-16",
       "port-version": 2
+    },
+    "thor": {
+      "baseline": "2022-04-16",
+      "port-version": 0
     },
     "thorvg": {
       "baseline": "0.15.6",
@@ -9259,6 +9311,10 @@
     "upa-url": {
       "baseline": "1.0.2",
       "port-version": 0
+    },
+    "upb": {
+      "baseline": "4.25.1",
+      "port-version": 1
     },
     "urdfdom": {
       "baseline": "3.1.1",
