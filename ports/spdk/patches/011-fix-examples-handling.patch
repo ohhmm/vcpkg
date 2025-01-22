@@ -1,0 +1,26 @@
+diff --git a/meson.build b/meson.build
+index abc123..def456 789
+--- a/meson.build
++++ b/meson.build
+@@ -88,12 +88,14 @@ subdir('app')
+ # build docs
+ subdir('doc')
+ 
+-# build any examples explicitly requested - useful for developers - and
+-# install any example code into the appropriate install path
+-subdir('examples')
+-install_subdir('examples',
+-        install_dir: get_option('datadir') + '/dpdk',
+-        exclude_files: ex_file_excludes)
++examples_opt = get_option('examples')
++if examples_opt == true
++    # build any examples explicitly requested - useful for developers - and
++    # install any example code into the appropriate install path
++    message('Building examples...')
++    subdir('examples')
++    install_subdir('examples',
++            install_dir: get_option('datadir') + '/dpdk')
++endif
+ 
+ # build kernel modules
+ subdir('kernel')

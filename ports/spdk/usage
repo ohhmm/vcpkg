@@ -1,5 +1,9 @@
 The package spdk is compatible with built-in CMake targets:
 
+WARNING: SPDK 24.09 includes breaking ABI changes:
+- DIF PI format enum values changed to match NVMe specification
+- Deprecated aux buffer APIs (spdk_bdev_io_get_aux_buf and spdk_bdev_io_put_aux_buf) will be removed in 25.01
+
 Add following to build examples/nvme/perf/perf.c
 
     FIND_PACKAGE(spdk CONFIG REQUIRED)

@@ -1,0 +1,42 @@
+diff --git a/configure b/configure
+index abc123..def456 789
+--- a/configure
++++ b/configure
+@@ -123,6 +123,7 @@ function configure_spdk()
+       --with-dpdk=*)
+           DPDK_DIR="${arg#*=}"
+           if [ -d "$DPDK_DIR" ]; then
++            # Normalize paths and set up environment
++            DPDK_DIR=$(readlink -f "$DPDK_DIR")
++            dpdk_libdir="$DPDK_DIR/lib"
++            dpdk_incdir="$DPDK_DIR/include"
++            
++            # Completely isolate pkg-config environment
++            export PKG_CONFIG_PATH="$dpdk_libdir/pkgconfig"
++            export PKG_CONFIG_LIBDIR="$dpdk_libdir/pkgconfig"
++            export PKG_CONFIG_SYSROOT_DIR="/"
++            export PKG_CONFIG_ALLOW_SYSTEM_LIBS=0
++            export PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=0
++            export PKG_CONFIG_SYSTEM_LIBRARY_PATH=""
++            export PKG_CONFIG_SYSTEM_INCLUDE_PATH=""
++            
++            # Force our DPDK paths
++            export DPDK_LIB_DIR="$dpdk_libdir"
++            export DPDK_INC_DIR="$dpdk_incdir"
++            export DPDK_PKG_CONFIG_PATH="$dpdk_libdir/pkgconfig"
++            
++            # Set up configuration
++            CONFIG[DPDK_DIR]="$DPDK_DIR"
++            CONFIG[DPDK_LIB_DIR]="$dpdk_libdir"
++            CONFIG[DPDK_INC_DIR]="$dpdk_incdir"
++            CONFIG[DPDK_PKG_CONFIG]=y
++            
+             echo "Using DPDK from $DPDK_DIR"
++            echo "DPDK libraries: $dpdk_libdir"
++            echo "DPDK includes: $dpdk_incdir"
++            echo "PKG_CONFIG_PATH=$PKG_CONFIG_PATH"
+           else
+               echo "DPDK directory $DPDK_DIR does not exist"
+               return 1
+           fi
+           ;;

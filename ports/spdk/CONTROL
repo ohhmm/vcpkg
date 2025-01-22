@@ -1,0 +1,6 @@
+Source: spdk
+Version: 24.09
+Homepage: https://spdk.io
+Description: Storage Performance Development Kit
+Build-Depends: vcpkg-cmake, vcpkg-cmake-config
+Supports: linux

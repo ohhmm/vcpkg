@@ -1,0 +1,25 @@
+diff --git a/configure b/configure
+index abc123..def456 789
+--- a/configure
++++ b/configure
+@@ -123,6 +123,7 @@ function configure_spdk()
+      --with-dpdk=*)
+          DPDK_DIR="${arg#*=}"
+          if [ -d "$DPDK_DIR" ]; then
++            export PKG_CONFIG_LIBDIR="$DPDK_DIR/lib/pkgconfig"
++            export PKG_CONFIG_PATH="$DPDK_DIR/lib/pkgconfig"
++            export PKG_CONFIG_ALLOW_SYSTEM_LIBS=0
++            export PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=0
++            unset PKG_CONFIG_SYSTEM_LIBRARY_PATH
++            unset PKG_CONFIG_SYSTEM_INCLUDE_PATH
++            export DPDK_LIB_DIR="$DPDK_DIR/lib"
++            export DPDK_INC_DIR="$DPDK_DIR/include"
++            export DPDK_PKG_CONFIG_PATH="$DPDK_DIR/lib/pkgconfig"
+             echo "Using DPDK from $DPDK_DIR"
++            echo "PKG_CONFIG_PATH=$PKG_CONFIG_PATH"
++            echo "PKG_CONFIG_LIBDIR=$PKG_CONFIG_LIBDIR"
+          else
+              echo "DPDK directory $DPDK_DIR does not exist"
+              return 1
+          fi
+          ;;
