@@ -1,6 +1,6 @@
 {
   "name": "spdk",
-  "version": "24.09",
+  "version": "24.9.0",
   "description": "Storage Performance Development Kit",
   "supports": "linux",
   "dependencies": [
