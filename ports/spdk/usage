@@ -1,5 +1,10 @@
 The package spdk is compatible with built-in CMake targets:
 
+WARNING: SPDK 24.01 includes breaking changes:
+- New max_rw_size field in spdk_bdev structure affects bdev modules
+- Added iobuf configuration options (iobuf_small_cache_size, iobuf_large_cache_size)
+- New DIF operations in accel module with spdk_accel_submit_dif_* APIs
+
 Add following to build examples/nvme/perf/perf.c
 
     FIND_PACKAGE(spdk CONFIG REQUIRED)
