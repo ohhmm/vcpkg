@@ -1,6 +1,6 @@
 {
   "name": "spdk",
-  "version-string": "24.01",
+  "version": "24.09",
   "description": "Storage Performance Development Kit",
   "supports": "linux",
   "dependencies": [
@@ -9,6 +9,10 @@
     "spdk-isal",
     {
       "name": "vcpkg-cmake",
+      "host": true
+    },
+    {
+      "name": "vcpkg-cmake-config",
       "host": true
     }
   ]
