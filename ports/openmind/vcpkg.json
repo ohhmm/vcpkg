@@ -1,0 +1,25 @@
+{
+  "name": "openmind",
+  "version-date": "2024-01-28",
+  "description": "OpenMind project",
+  "license": "MIT",
+  "dependencies": [
+    "boost",
+    "fmt",
+    "leveldb",
+    "lz4",
+    "python3",
+    "rocksdb",
+    "snappy",
+    "tbb",
+    {
+      "name": "vcpkg-cmake",
+      "host": true
+    },
+    {
+      "name": "vcpkg-cmake-config",
+      "host": true
+    },
+    "vulkan"
+  ]
+}
