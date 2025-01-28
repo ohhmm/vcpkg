@@ -6736,6 +6736,10 @@
       "baseline": "10.0",
       "port-version": 0
     },
+    "openmind": {
+      "baseline": "2024-01-28",
+      "port-version": 0
+    },
     "openmpi": {
       "baseline": "4.1.6",
       "port-version": 1
